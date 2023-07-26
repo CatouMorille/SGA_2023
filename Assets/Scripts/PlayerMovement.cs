@@ -1,13 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float movementSpeed = 2.0f;
+    private InputActionReference movement;
+
+    [SerializeField]
+    private float movementSpeed = 5f;
+
+    [SerializeField]
+    private float smoothInputSpeed = 0.2f;
+
     private Rigidbody2D rb;
     private Vector2 movementDirection;
+    private Vector2 currentInputVector;
+    private Vector2 smoothInputVelocity;
+
+    // UtilisÃ© pour passer derriÃ¨re et devant l'arbre
+    private SpriteRenderer sr;
 
     //Utilisé pour passer derrière et devant l'arbre
     private SpriteRenderer sr;
@@ -20,12 +33,34 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movementDirection = movement.action.ReadValue<Vector2>();
     }
 
     void FixedUpdate()
     {
-        rb.velocity = movementDirection * movementSpeed;
+        currentInputVector = Vector2.SmoothDamp(
+            currentInputVector,
+            movementDirection,
+            ref smoothInputVelocity,
+            smoothInputSpeed
+        );
+        rb.velocity = currentInputVector * movementSpeed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Debug.Log("detection with tree");
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Tree"))
+        {
+            sr.sortingOrder = -1;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider) {
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Tree"))
+        {
+            sr.sortingOrder = 99;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

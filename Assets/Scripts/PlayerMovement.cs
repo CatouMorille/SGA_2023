@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float movementSpeed = 2.0f;
+    private InputActionReference movement;
+
+    [SerializeField]
+    private float movementSpeed = 5f;
+
+    [SerializeField]
+    private float smoothInputSpeed = 0.2f;
+
     private Rigidbody2D rb;
     private Vector2 movementDirection;
+    private Vector2 currentInputVector;
+    private Vector2 smoothInputVelocity;
 
     void Start()
     {
@@ -16,11 +26,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movementDirection = movement.action.ReadValue<Vector2>();
     }
 
     void FixedUpdate()
     {
-        rb.velocity = movementDirection * movementSpeed;
+        currentInputVector = Vector2.SmoothDamp(
+            currentInputVector,
+            movementDirection,
+            ref smoothInputVelocity,
+            smoothInputSpeed
+        );
+        rb.velocity = currentInputVector * movementSpeed;
     }
 }

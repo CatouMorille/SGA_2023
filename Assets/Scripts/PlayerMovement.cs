@@ -19,9 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 currentInputVector;
     private Vector2 smoothInputVelocity;
 
-    // UtilisÃ© pour passer derriÃ¨re et devant l'arbre
-    private SpriteRenderer sr;
-
     //Utilisé pour passer derrière et devant l'arbre
     private SpriteRenderer sr;
 
@@ -49,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("detection with tree");
         if (collider.gameObject.layer == LayerMask.NameToLayer("Tree"))
         {
             sr.sortingOrder = -1;
@@ -58,22 +54,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider) {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Tree"))
-        {
-            sr.sortingOrder = 99;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Tree"))
-        {
-            sr.sortingOrder = -1;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Tree"))
         {
             sr.sortingOrder = 99;
         }

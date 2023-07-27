@@ -5,10 +5,6 @@ using UnityEngine.InputSystem;
 
 public class DialogTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")]
-    [SerializeField]
-    private GameObject visualCue;
-
     [Header("Ink Json")]
     [SerializeField]
     private TextAsset inkJson;
@@ -16,10 +12,14 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField]
     private InputActionReference actionPressedInput;
 
+    private GameObject visualCue;
+
     private bool playerInRange;
 
     private void Awake()
     {
+        visualCue = transform.GetChild(0).gameObject;
+
         visualCue.SetActive(false);
         playerInRange = false;
     }
@@ -28,7 +28,11 @@ public class DialogTrigger : MonoBehaviour
     {
         if (playerInRange)
         {
-            Debug.Log("open dialog with text: " + inkJson.text);
+            DialogueManager dm = DialogueManager.instance;
+            if (!dm.dialogIsPlaying)
+            {
+                dm.EnterDialogueMode(inkJson);
+            }
         }
     }
 

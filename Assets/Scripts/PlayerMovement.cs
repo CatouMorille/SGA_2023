@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 currentInputVector;
     private Vector2 smoothInputVelocity;
 
-    //Utilisé pour passer derrière et devant l'arbre
+    // Utilisï¿½ pour passer derriï¿½re et devant l'arbre
     private SpriteRenderer sr;
 
     void Start()
@@ -35,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.instance.dialogIsPlaying)
+        {
+            // Force movement speed to 0 if dialog is open
+            rb.velocity = currentInputVector * 0;
+            return;
+        }
+
         currentInputVector = Vector2.SmoothDamp(
             currentInputVector,
             movementDirection,
@@ -52,7 +59,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider) {
+    private void OnTriggerExit2D(Collider2D collider)
+    {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Tree"))
         {
             sr.sortingOrder = 99;

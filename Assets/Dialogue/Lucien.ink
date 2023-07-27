@@ -1,4 +1,4 @@
-Lucien Brätschi est, comme d'habitude, en train de dormir à poings fermés. 
+Lucien Brätschi est, comme d'habitude, en train de dormir à poings fermés.
     * Le réveiller 
         -> awake
     * Le laisser dormir

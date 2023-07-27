@@ -22,10 +22,13 @@ public class PlayerMovement : MonoBehaviour
     // Utilis� pour passer derri�re et devant l'arbre
     private SpriteRenderer sr;
 
+    private Animator animatorPlayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        animatorPlayer = GetComponent<Animator>();
     }
 
     void Update()
@@ -49,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
             smoothInputSpeed
         );
         rb.velocity = currentInputVector * movementSpeed;
+
+        // Changement d'animation
+        animatorPlayer.SetFloat("SpeedX", rb.velocity.x);
+        animatorPlayer.SetFloat("SpeedY", rb.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

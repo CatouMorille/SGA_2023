@@ -10,10 +10,18 @@ Gwenaëlle Goetschi profite d'un moment de répi sans son mari et son fils.
 « Damien ! Si tu savais comme mon frère est tout retourné depuis que tu nous a quittés !
 La pensée que tu ne seras pas là à l'aube pour égayer sa journée de travail lui a fait perdre toute envie de se lever. »
     * [Dis-lui que c'est pas comme ça qu'il va devenir meilleur que moi !]
-        -> best
+        -> END
     * [Lui qui connaît si bien les bêtes, ce serait quand même dommage !]
-        -> beast
+        -> END
+        
+=== scary ===
+« AAAAAAAAAAAH !!!!! Un fantôôôôôôme ! »
+Gwenaëlle  s'en va en courant, vous laissant seul. Il vaudrait mieux s'éloigner un peu et revenir plus tard.
+    -> END
+        
+-> END
 
+/* ---------------------------------
 
 === best ===
 « Oh ! Que tu es taquin !  »
@@ -29,12 +37,11 @@ La pensée que tu ne seras pas là à l'aube pour égayer sa journée de travail
 
 
 
-=== scary ===
-« AAAAAAAAAAAH !!!!! Un fantôôôôôôme ! »
-Gwenaëlle  s'en va en courant, vous laissant seul. Il vaudrait mieux s'éloigner un peu et revenir plus tard.
-    -> END
+=== final ===
 
-=== final === 
+ ----------------------------------*/
+
+ 
 
 
-    -> END
+   

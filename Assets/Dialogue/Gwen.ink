@@ -1,18 +1,32 @@
 // Adrien et nous = collègues + poule aux oeufs d'or 
 
-Gwenaëlle Goetschi est en train de laver le linge de ses enfants et de son mari. 
-    * {not quiet} S'amuser à lui faire peur
+Gwenaëlle Goetschi profite d'un moment de répi sans son mari et son fils. 
+    * {not quiet} [S'amuser à lui faire peur]
         -> scary
-    + L'approcher doucement
+    + [L'approcher doucement]
         -> quiet
         
 === quiet === 
-« Damien ! Si tu savais comme Adrien est tout retourné depuis que tu nous a quittés !
-Savoir que tu ne seras pas là à l'aube pour égayer sa journée lui a même fait perdre toute envie d'aller travailler. »
-    * Dis-lui que c'est pas comme ça qu
-    * 
+« Damien ! Si tu savais comme mon frère est tout retourné depuis que tu nous a quittés !
+La pensée que tu ne seras pas là à l'aube pour égayer sa journée de travail lui a fait perdre toute envie de se lever. »
+    * [Dis-lui que c'est pas comme ça qu'il va devenir meilleur que moi !]
+        -> best
+    * [Lui qui connaît si bien les bêtes, ce serait quand même dommage !]
+        -> beast
 
-Lui qui connaît pourtant si bien les bêtes !
+
+=== best ===
+« Oh ! Que tu es taquin !  »
+
+
+=== beast ===
+«    »
+
+=== secret === 
+
+
+=== poule ===
+
 
 
 === scary ===
@@ -21,6 +35,6 @@ Gwenaëlle  s'en va en courant, vous laissant seul. Il vaudrait mieux s'éloigne
     -> END
 
 === final === 
-Vous la laisser tranquillement finir de nettoyer son linge.
+
 
     -> END

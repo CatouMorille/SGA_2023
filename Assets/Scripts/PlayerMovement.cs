@@ -38,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.instance == null)
+        {
+            return;
+        }
+
         if (DialogueManager.instance.dialogIsPlaying)
         {
             // Force movement speed to 0 if dialog is open

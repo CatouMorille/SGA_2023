@@ -131,6 +131,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 656836575526381615, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 656836575526381615, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 656836575526381615, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.79607844
+      objectReference: {fileID: 0}
     - target: {fileID: 1995634153616972172, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -210,6 +222,18 @@ PrefabInstance:
     - target: {fileID: 1995634153616972172, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334111410844026204, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334111410844026204, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334111410844026204, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.79607844
       objectReference: {fileID: 0}
     - target: {fileID: 6964331676141617285, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
       propertyPath: m_Name
@@ -490,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 1065320460252366681, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: inkJson
       value: 
-      objectReference: {fileID: 4900000, guid: 2a2e45deb8fc3c44bb94859f2ca8d4a2, type: 3}
+      objectReference: {fileID: 4900000, guid: 749ef821aa8415341a9072f8857e1aac, type: 3}
     - target: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: m_Name
       value: NPC

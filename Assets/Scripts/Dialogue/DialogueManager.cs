@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -89,8 +90,11 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
+        ReadChoice();
+
         if (currentStory.canContinue)
         {
+            Debug.Log("Can continue");
             // set the text of dialog
             dialogueText.text = currentStory.Continue();
 
@@ -99,13 +103,14 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("end dialog");
             ExitDialogueMode();
         }
     }
 
     private void DisplayChoices()
     {
-        Debug.Log("Display choices");
+        Debug.Log("Display Choice");
         List<Choice> currentChoices = currentStory.currentChoices;
 
         // defensive check in case inky file contains more choices than supported by GUI
@@ -141,8 +146,28 @@ public class DialogueManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
 
-    public void MakeChoice(int choiceIndex){
-        currentStory.ChooseChoiceIndex(choiceIndex);
+    private void ReadChoice()
+    {
+        Debug.Log("reading choice...");
+        GameObject selectedGameObject = EventSystem.current.currentSelectedGameObject;
+        if (selectedGameObject == null || !selectedGameObject.activeSelf)
+        {
+            Debug.Log("no choice detected");
+            return;
+        }
+
+        if (selectedGameObject.name == "Choice0")
+        {
+            Debug.Log("choice 0 detected");
+            currentStory.ChooseChoiceIndex(0);
+            return;
+        }
+        else
+        {
+            Debug.Log("choice 1 detected");
+            currentStory.ChooseChoiceIndex(1);
+            return;
+        }
     }
 
     private void OnEnable()

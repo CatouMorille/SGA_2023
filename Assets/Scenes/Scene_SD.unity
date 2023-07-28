@@ -1312,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 1065320460252366681, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: inkJson
       value: 
-      objectReference: {fileID: 4900000, guid: bc9e06883b841427fb01b94884047802, type: 3}
+      objectReference: {fileID: 4900000, guid: 89fa1fa789e29b243816333b9af695f5, type: 3}
     - target: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -1639,6 +1639,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 499e812f-2552-498b-a094-6e0390dc2d52
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: f5a8dc50-7485-4048-9aa1-01c8baa02303
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: PlayerInput/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: PlayerInput/ActionPressed[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: dialogueText
       value: 

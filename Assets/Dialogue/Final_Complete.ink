@@ -8,7 +8,7 @@ VAR neutre = false
 
 Une silhouette étrange et lumineuse se tient devant ta tombe. 
 Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
-    * [Mais t'es apparue quand toi?!]
+    * [Mais t'es apparue quand toi ?!]
         ~reaction = "et j'apparais quand je veux ! J"
     * [Pardon, mais t'es qui toi ?!]
         ~reaction = "figures-toi ! Et j"
@@ -27,10 +27,10 @@ As-tu découvert ce qui t'es arrivé ? »
 Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
 -> END
 
-=== Pret == =
+=== Pret ===
 « C'est bien ! Tu es donc prêt à répondre à mes questions ? »
     * [Oui !]
-        -> questionnaire
+        -> Questionnaire
     * [Heu... non en fait, pas vraiment...]
         -> SortieFache 
 
@@ -55,7 +55,7 @@ Selon toi tu as été tué par
 
 === AccidentCanard === 
 Vous avez soudain une illumation : « C'est exactement ça ! Un canard enragé m'a bequeté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
-~VAR angry = true
+~angry = true
 -> FalseEnding
 
 
@@ -119,10 +119,10 @@ Cette femme, il se pourrait bien que ce soit
 === RaisonGwen === 
 Pourquoi Gwenaëlle aurait-elle voulu te tuer ? 
     * [Par jalousie]
-        ~FalseEndingCause : "jalousie"
+        ~FalseEndingCause = "jalousie"
         -> FalseEndingGwen
     * [Par cupidité]
-        ~FalseEndingCause : "cupidité"
+        ~FalseEndingCause = "cupidité"
         -> FalseEndingGwen
 
 === FalseEndingGwen == 
@@ -138,18 +138,18 @@ Sainte Pierrette tape violemment sa crosse au sol, hors d'elle. « Mais voyons !
 Pourquoi ton patron, voudrait-il donc te tuer ? 
     * [pour mon insolence]
         ~caractere = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
-        -> FalseEndingCause
+        -> FalseEndingRaison
     * [pour mon caractère de cochon]
         ~caractere = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
-        -> FalseEndingCause
+        -> FalseEndingRaison
 
 
 === MurderAdrien === 
 Mais pourquoi ton meilleur pote voudrait-il te tuer ? 
     * [Par jalousie voyons !]
-        ~error = true
-        ~FalseEndingCause
-        -> FalseEnding
+        ~angry = true
+        ~FalseEndingCause = "J'étais bien meilleur que lui et il ne le supportais vraiment plus !"
+        -> FalseEndingRaison
     * [Il pense que je l'ai trahi, le bougre !]
         -> MurderAPtrahison
 
@@ -202,11 +202,14 @@ Qu'est-ce qu'il a utilisé ?
 Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
 Tu t'écries : « Ce serait donc sa soeur, Gwenaëlle, qui lui a monté la bourrichon contre moi ?! » 
 Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'accuser toujours les femmes aussi ! »
-Cette accusation gratuite semble l'avoir visiblement énervée.  
+Cette accusation gratuite semble l'avoir visiblement énervée. 
+-> PresqueEnding
+
 
 === PresqueEndingRationnel === 
 Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
 Tu t'écries : « {PresqueEndingCause} » 
+-> PresqueEnding
 
 
 === PresqueEndingAneries === 
@@ -216,7 +219,7 @@ Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des
 Puis elle reprend, un peu plus conciliante.  
         -> PresqueEnding
 
-=== FalseEndingCause === 
+=== FalseEndingRaison === 
 Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
 Tu t'écries : « {FalseEndingCause} » 
 -> FalseEnding
@@ -250,8 +253,3 @@ Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qu
         -> END
     * [Adrien doit payer !]
         -> END
-
-        
-
-
-    -> END

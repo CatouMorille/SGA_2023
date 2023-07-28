@@ -1,36 +1,38 @@
 VAR error = false
+VAR reaction = ""
 
-Arrivé devant l'église, une lumière te baigne de sa lumière et une voix résonne dans ta tête. 
-« Ô toi, âme égarée ! Arrête-toi un instant. »
-    * Qui me parle ?!
-    * Non mais oh! T'es qui toi ?
-    - -> SaintPierre
+Une silhouette étrange et lumineuse se tient devant ta tombe. Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
+    * [Mais t'es apparue quand toi?!]
+        ~reaction = "et j'apparais quand je veux ! J"
+    * [Pardon, mais t'es qui toi ?!]
+        ~reaction = "figures-toi ! Et j"
+    - -> StePierrette
 
-=== SaintPierre === 
-« Surveille ton langage petit, je suis le seul ici à pouvoir t'aider. As-tu découvert ce qui t'es arrivé ? »
-    * Non
+=== StePierrette === 
+« Surveille ton langage petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. As-tu découvert ce qui t'es arrivé ? »
+    * [Non]
         -> Sortie
-    * Oui
+    * [Oui]
         -> Pret
 
 === Sortie === 
 « Alors va ! Fouille, interroge et surtout, réfléchis ! Je n'ai pas de temps à perdre avec les idiots. 
-Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai pour te faire entrer au Paradis. »
+Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
 -> END
 
 === Pret == =
 « C'est bien ! Tu es donc prêt à répondre à mes questions ? »
-    * Oui
+    * [Oui]
         -> questionnaire
-    * Heu... non en fait, pas vraiment
+    * [Heu... non en fait, pas vraiment]
         -> SortieFache 
 
 === SortieFache ===
-« Alors cesse de me faire perdre mon temps et ne reviens quand tu te sentiras prêt à répondre à mes questions !»
+« Alors cesse de me faire perdre mon temps et ne reviens quand tu sauras vraiment ce qui t'es arrivé !»
     -> END
 
 === Questionnaire === 
-Bien ! Alors commençaons avec une question facile. Tu penses que ta mort est  
+Bien ! Alors commençons avec une question facile. Tu penses que ta mort est  
     * [un bête accident]
         ~error = true
         -> ACCIDENT 
@@ -161,7 +163,7 @@ C'est lui, Adrien.
 C'est lui qui t'a trahi ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute en pleine face.
 Mais comment a-t-il pu croire que tu le trahirais ? Comment a-t-il pu penser que tu lui volerais sa poule aux oeufs d'or ?
 La colère monte : « Adrien m'a encorné avec un taureau ! »
-Soudain la voix de Saint-Pierre retentit de nouveau : « Ohlà petit ! Chuis pas sourd ! Crie pas comme ça !  
+Soudain la voix de Sainte Pierrette retentit de nouveau : « Ohlà petit ! Chuis pas sourd ! Crie pas comme ça !  
 Bon, j'ai pas toute l'éternité devant moi ! Faudrait voir pour me dire ce que tu veux faire ! 
 Tu veux le hanter à tout jamais ou tu te bouges pour venir nous rejoindre ? »
     * [Rejoindre le Paradis, bien sûr !]

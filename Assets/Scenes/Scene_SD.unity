@@ -1312,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 1065320460252366681, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: inkJson
       value: 
-      objectReference: {fileID: 4900000, guid: 89fa1fa789e29b243816333b9af695f5, type: 3}
+      objectReference: {fileID: 4900000, guid: 7ac9fa87eb2cd5139b155d735c18f25e, type: 3}
     - target: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: m_Name
       value: NPC

@@ -462,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 934257941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 8.93, z: 0}
+  m_LocalPosition: {x: -1.54, y: 8.93, z: 0}
   m_LocalScale: {x: 0.4189721, y: 0.6600962, z: 0.66188323}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6c937eee1b86e24866412adf18b90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationDurationInSec: 12
+  animationDurationInSec: 10
   beamingSpeed: 1
   toBeamObjects:
   - {fileID: 1525687880}

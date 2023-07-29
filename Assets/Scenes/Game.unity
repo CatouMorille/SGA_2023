@@ -5526,7 +5526,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4158d25113d195b518d2d37a3394b4d3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -25904,6 +25904,10 @@ PrefabInstance:
       propertyPath: normalNpcs.Array.data[5]
       value: 
       objectReference: {fileID: 1371517539}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: PierretteAppearenceInkJson
+      value: 
+      objectReference: {fileID: 4900000, guid: e9dfac58053edb348be41e05f8a97ccb, type: 3}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierretteCorrectResponses.Array.size
       value: 13

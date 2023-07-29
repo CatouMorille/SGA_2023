@@ -6,6 +6,7 @@ using Ink.Runtime;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -24,15 +25,35 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject[] choices;
 
+    [Space(10)]
+    [Header("Npcs")]
+    [SerializeField]
+    private GameObject[] normalNpcs;
+
+    [Header("Pierrette")]
+    [SerializeField]
+    private GameObject pierrette;
+
+    [SerializeField]
+    private int[] pierretteCorrectResponses;
+
+    private bool[] pierretteGivenAnswerValidity;
+
+    private int pierretteResponseIndex;
+
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
+
+    private string currentNpcName;
+
+    private Dictionary<string, bool> visitedNpcs = new Dictionary<string, bool>();
 
     public bool dialogIsPlaying { get; private set; }
 
     public static DialogueManager instance { get; private set; }
 
-    public float closingTimeInMiliseconds = 0f;
+    private float closingTimeInMiliseconds = 0f;
 
     private void Awake()
     {
@@ -41,6 +62,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("creation of multiple DialogueManager found.");
         }
         instance = this;
+
+        pierretteGivenAnswerValidity = new bool[pierretteCorrectResponses.Length];
     }
 
     public void Start()
@@ -56,6 +79,13 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
+
+        foreach (var item in normalNpcs)
+        {
+            visitedNpcs.Add(item.gameObject.name, false);
+        }
+
+        pierrette.SetActive(false);
     }
 
     private void PerformAction(InputAction.CallbackContext obj)
@@ -66,7 +96,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJson)
+    public void EnterDialogueMode(TextAsset inkJson, string npcName)
     {
         if (IsJustClosing())
         {
@@ -76,8 +106,23 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJson.text);
         dialogIsPlaying = true;
         dialoguePanel.SetActive(true);
+        currentNpcName = npcName;
+
+        visitedNpcs[npcName] = true;
 
         ContinueStory();
+    }
+
+    private bool isAllNpcVisited()
+    {
+        foreach (var item in visitedNpcs.Values)
+        {
+            if (!item)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void ExitDialogueMode()
@@ -86,6 +131,48 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
         closingTimeInMiliseconds = CurrentTimeInMilliseconds();
+
+        if (isAllNpcVisited())
+        {
+            pierrette.SetActive(true);
+        }
+
+        pierretteResponseIndex = 0;
+        if (allPierretteResponseCorrect())
+        {
+            SceneManager.LoadScene("End");
+        }
+        else
+        {
+            resetPierretteResponse();
+        }
+    }
+
+    private void resetPierretteResponse()
+    {
+        for (int i = 0; i < pierretteCorrectResponses.Length; i++)
+        {
+            pierretteGivenAnswerValidity[i] = false;
+        }
+    }
+
+    private bool allPierretteResponseCorrect()
+    {
+        if (currentNpcName != pierrette.name)
+        {
+            return false;
+        }
+
+        foreach (bool answerValidity in pierretteGivenAnswerValidity)
+        {
+            if (!answerValidity)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        return true;
     }
 
     private void ContinueStory()
@@ -94,7 +181,6 @@ public class DialogueManager : MonoBehaviour
 
         if (currentStory.canContinue)
         {
-            Debug.Log("Can continue");
             // set the text of dialog
             dialogueText.text = currentStory.Continue();
 
@@ -103,14 +189,12 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("end dialog");
             ExitDialogueMode();
         }
     }
 
     private void DisplayChoices()
     {
-        Debug.Log("Display Choice");
         List<Choice> currentChoices = currentStory.currentChoices;
 
         // defensive check in case inky file contains more choices than supported by GUI
@@ -133,6 +217,7 @@ public class DialogueManager : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
+        // Select the first choice in the next frame
         StartCoroutine(SelectFirstChoice());
     }
 
@@ -140,34 +225,41 @@ public class DialogueManager : MonoBehaviour
     {
         // Event System requires we clear it first and set it after at least one frame.
         EventSystem.current.SetSelectedGameObject(null);
-
         yield return new WaitForEndOfFrame();
-
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
 
     private void ReadChoice()
     {
-        Debug.Log("reading choice...");
         GameObject selectedGameObject = EventSystem.current.currentSelectedGameObject;
         if (selectedGameObject == null || !selectedGameObject.activeSelf)
         {
-            Debug.Log("no choice detected");
             return;
         }
 
-        if (selectedGameObject.name == "Choice0")
+        int choiceIndex = 0;
+        if (selectedGameObject.name == "Choice1")
         {
-            Debug.Log("choice 0 detected");
-            currentStory.ChooseChoiceIndex(0);
+            choiceIndex = 1;
+        }
+
+        currentStory.ChooseChoiceIndex(choiceIndex);
+
+        verifyPierettesChoice(choiceIndex);
+    }
+
+    private void verifyPierettesChoice(int answer)
+    {
+        if (currentNpcName != pierrette.name)
+        {
             return;
         }
-        else
+
+        if (pierretteCorrectResponses[pierretteResponseIndex] == answer || answer == 2)
         {
-            Debug.Log("choice 1 detected");
-            currentStory.ChooseChoiceIndex(1);
-            return;
+            pierretteGivenAnswerValidity[pierretteResponseIndex] = true;
         }
+        pierretteResponseIndex++;
     }
 
     private void OnEnable()

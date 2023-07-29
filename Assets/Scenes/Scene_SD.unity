@@ -270,6 +270,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6861683051591784774, guid: 1b1d9350025fe024da40c0419a6a80ec, type: 3}
   m_PrefabInstance: {fileID: 11799407}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &79244169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
+  m_PrefabInstance: {fileID: 1840463821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128668281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7175045070286888706, guid: 8bfad8dd280b05a45a224bb1a4aff648, type: 3}
@@ -503,6 +508,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 392659796389214401, guid: 2f88f74ce8f6a94309f9ef9534d30b56, type: 3}
   m_PrefabInstance: {fileID: 1268012726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1801372886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1065320460252366681, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: inkJson
+      value: 
+      objectReference: {fileID: 4900000, guid: 2a2e45deb8fc3c44bb94859f2ca8d4a2, type: 3}
+    - target: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_Name
+      value: Pierrette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37649dd0d22962c429fad48037689594, type: 3}
 --- !u!1001 &1840463821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 749ef821aa8415341a9072f8857e1aac, type: 3}
     - target: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: John
       objectReference: {fileID: 0}
     - target: {fileID: 8447471788442857696, guid: 37649dd0d22962c429fad48037689594, type: 3}
       propertyPath: m_LocalPosition.x
@@ -621,6 +687,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a853422c1bfa394dbba3c53a9c4ace6, type: 3}
+--- !u!1 &2145171108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270638836455029713, guid: 37649dd0d22962c429fad48037689594, type: 3}
+  m_PrefabInstance: {fileID: 1801372886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7383420907967471584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -739,6 +810,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: pierrette
+      value: 
+      objectReference: {fileID: 2145171108}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 11799410}
@@ -758,6 +833,18 @@ PrefabInstance:
       propertyPath: choices.Array.data[1]
       value: 
       objectReference: {fileID: 11799408}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: normalNpcs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: normalNpcs.Array.data[0]
+      value: 
+      objectReference: {fileID: 79244169}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: pierretteCorrectResponses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3659664966905890389, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.294767
@@ -819,3 +906,4 @@ SceneRoots:
   - {fileID: 8304451624129215638}
   - {fileID: 11799407}
   - {fileID: 1192094251}
+  - {fileID: 1801372886}

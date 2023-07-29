@@ -15,7 +15,7 @@ Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
     - -> StePierrette
 
 === StePierrette === 
-« Surveille ton langage petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. 
+« Surveille ton langage, petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. 
 As-tu découvert ce qui t'es arrivé ? »
     * [Non]
         -> Sortie
@@ -130,17 +130,18 @@ Pourquoi Gwenaëlle aurait-elle voulu te tuer ?
 -> FalseEnding
 
 === RaisonFantome === 
-Ca tombe sous le sens ! Tu t'écries : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils »
-Sainte Pierrette tape violemment sa crosse au sol, hors d'elle. « Mais voyons ! Shanti Pugin est morte depuis des mois ! »
+Ca tombe sous le sens ! Tu t'écries : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils ! »
+« Mais voyons ! Shanti Pugin est morte depuis des mois ! »
+~angry = true
 -> FalseEnding
 
 === MurderAutre === 
 Pourquoi ton patron, voudrait-il donc te tuer ? 
     * [pour mon insolence]
-        ~caractere = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
+        ~FalseEndingCause = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
         -> FalseEndingRaison
     * [pour mon caractère de cochon]
-        ~caractere = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
+        ~FalseEndingCause = "C'est donc mon mauvais caractère qui m'a coûté la vie ?!"
         -> FalseEndingRaison
 
 
@@ -148,7 +149,7 @@ Pourquoi ton patron, voudrait-il donc te tuer ?
 Mais pourquoi ton meilleur pote voudrait-il te tuer ? 
     * [Par jalousie voyons !]
         ~angry = true
-        ~FalseEndingCause = "J'étais bien meilleur que lui et il ne le supportais vraiment plus !"
+        ~FalseEndingCause = "J'étais bien meilleur que lui et il ne le supportait vraiment plus !"
         -> FalseEndingRaison
     * [Il pense que je l'ai trahi, le bougre !]
         -> MurderAPtrahison
@@ -182,7 +183,7 @@ Et qu'est-ce qui vraiment arrivé à cette poule ?
 
 
 ==== MurderCause === 
-Et comment Adrien a-t-il procédé pour te tuer ? 
+Et comment Adrien t'a-t-il tué ? 
     * [Il a déguisé ça en accident !]
         -> MurderTaureau
     * [Il m'a sauvagement poignardé]
@@ -201,7 +202,7 @@ Qu'est-ce qu'il a utilisé ?
 === PresqueEndingGwen === 
 Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
 Tu t'écries : « Ce serait donc sa soeur, Gwenaëlle, qui lui a monté la bourrichon contre moi ?! » 
-Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'accuser toujours les femmes aussi ! »
+Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter de blâmer les femmes pour tout et n'importe quoi aussi ! »
 Cette accusation gratuite semble l'avoir visiblement énervée. 
 -> PresqueEnding
 
@@ -215,7 +216,7 @@ Tu t'écries : « {PresqueEndingCause} »
 === PresqueEndingAneries === 
 Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
 Tu t'écries : « {PresqueEndingCause} » 
-Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des âneries quand même ! »
+Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des âneries ! »
 Puis elle reprend, un peu plus conciliante.  
         -> PresqueEnding
 
@@ -227,7 +228,7 @@ Tu t'écries : « {FalseEndingCause} »
 
 === FalseEnding ===
 {angry : Sainte Pierrette tape violemment sa crosse au sol, hors d'elle. « Ah non hein ! J'ai pas de temps à perdre avec des âneries, moi ! »|Sainte Pierrette soupire et te regarde d'un air dépité.} 
-« Est-ce que je t'ai dit que je détestais perdre mon temps ?
+« Est-ce que je t'ai dis que je détestais perdre mon temps ?
 Allez, va refaire un tour et ne reviens que quand tu auras réfléchis un peu ! Je n'ai pas de temps à perdre avec les idiots ! »
 -> END
 
@@ -245,11 +246,14 @@ C'est lui, ton meilleur pote.
 C'est lui, Adrien. 
 C'est lui qui t'a trahi ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute en pleine face.
 Mais comment a-t-il pu croire que tu le trahirais ? Comment a-t-il pu penser que tu lui volerais sa poule aux oeufs d'or ?
-La colère monte : « Adrien m'a encorné avec un taureau ! »
-Soudain la voix de Sainte Pierrette retentit de nouveau : « Ohlà petit ! Chuis pas sourde ! Crie pas comme ça !  
+La colère monte : « Adrien, ce traître, m'a encorné avec un taureau !!! »
+« Ohlà petit ! Chuis pas sourde ! Crie pas comme ça !  
 Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi ! 
 Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
     * [Je viens au Paradis, bien sûr !]
         -> END
     * [Adrien doit payer !]
-        -> END
+        -> BadEnding
+        
+=== BadEnding == 
+« Bon ben amuse-toi bien alors ! Et loupe pas la prochaine ascension si tu changes d'avis ! » -> END

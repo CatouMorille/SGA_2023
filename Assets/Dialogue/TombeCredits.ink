@@ -1,8 +1,2 @@
-Art Design : Judicaël
-Programmation : Drinij et Malain
-Game Design : Catou
-Musiques : 
-Let the Mystery Unfold - geoffharvey (Pixabay)
-Deep in the Dell - geoffharvey (Pixabay)
-Chikumbumtima - 33nano (pixabay)
+Art Design : Judicaël <br>Programmation : Drinij et Malain <br>Game Design : Catou <br>Musiques : <br>Let the Mystery Unfold - geoffharvey (Pixabay) <br>Deep in the Dell - geoffharvey (Pixabay) <br>Chikumbumtima - 33nano (pixabay)
     -> END

@@ -773,42 +773,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
-      value: 499e812f-2552-498b-a094-6e0390dc2d52
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
-      value: f5a8dc50-7485-4048-9aa1-01c8baa02303
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
-      value: PlayerInput/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
-      value: PlayerInput/ActionPressed[/Keyboard/e]
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 744062021562714529, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierrette
       value: 
@@ -822,10 +786,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11799411}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: choices.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: choices.Array.data[0]
       value: 
       objectReference: {fileID: 11799409}
@@ -834,17 +794,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11799408}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: normalNpcs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: normalNpcs.Array.data[0]
       value: 
       objectReference: {fileID: 79244169}
-    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
-      propertyPath: pierretteCorrectResponses.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3659664966905890389, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.294767

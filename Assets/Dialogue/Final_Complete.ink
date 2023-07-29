@@ -251,6 +251,7 @@ La colère monte : « Adrien, ce traître, m'a encorné avec un taureau !!! »
 Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi ! 
 Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
     * [Je viens au Paradis, bien sûr !]
+        Une forte lumière vous envahit soudain et... 
         -> END
     * [Adrien doit payer !]
         -> BadEnding

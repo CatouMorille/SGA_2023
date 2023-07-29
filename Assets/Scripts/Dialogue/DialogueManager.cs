@@ -182,7 +182,6 @@ public class DialogueManager : MonoBehaviour
             {
                 return false;
             }
-            return true;
         }
 
         return true;

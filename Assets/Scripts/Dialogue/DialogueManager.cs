@@ -37,6 +37,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private int[] pierretteCorrectResponses;
 
+    [SerializeField]
+    private AudioSource pierretteSound;
+
+    [SerializeField]
+    private TextAsset PierretteAppearenceInkJson;
+
     private bool[] pierretteGivenAnswerValidity;
 
     private int pierretteResponseIndex;
@@ -96,9 +102,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJson, string npcName)
+    public void EnterDialogueMode(TextAsset inkJson, string npcName, bool hasNextDialog = false)
     {
-        if (IsJustClosing())
+        if (IsJustClosing() && !hasNextDialog)
         {
             return;
         }
@@ -132,9 +138,11 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         closingTimeInMiliseconds = CurrentTimeInMilliseconds();
 
-        if (isAllNpcVisited())
+        if (isAllNpcVisited() && !pierrette.activeSelf)
         {
             pierrette.SetActive(true);
+            EnterDialogueMode(PierretteAppearenceInkJson, "none", true);
+            pierretteSound.Play();
         }
 
         pierretteResponseIndex = 0;

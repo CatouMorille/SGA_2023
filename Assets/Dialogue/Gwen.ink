@@ -1,6 +1,6 @@
 // Adrien et nous = collègues + poule aux oeufs d'or 
 
-Gwenaëlle Goetschi profite d'un moment de répi sans son mari et son fils. 
+Gwenaëlle Goetschi profite d'un moment de répit sans son mari et son fils. 
     * [S'amuser à lui faire peur]
         -> scary
     * [L'approcher doucement]
@@ -34,9 +34,9 @@ Tu remarques que Gwenaëlle rougit légèrement.
 D'ailleurs, il m'a dit qu'il tenait absolument à te mettre au courant de notre secret de famille. 
 Maman lui a a confié son bien le plus précieux : la poule aux oeufs d'or qui se transmet de génération en génération ! »
     * [Mentir, et lui dire que tu n'étais pas au courant.]
-        -> verite
+        -> mensonge
     * [Lui avouer qu'il t'avait déjà livré son secret.]
-        -> secret
+        -> verite
 
 === mensonge === 
 Gwenaëlle porte les mains à sa bouche ! 

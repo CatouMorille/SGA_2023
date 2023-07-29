@@ -15,6 +15,7 @@ public class DialogTrigger : MonoBehaviour
     private GameObject visualCue;
 
     private bool playerInRange;
+    private string npcName;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class DialogTrigger : MonoBehaviour
 
         visualCue.SetActive(false);
         playerInRange = false;
+        npcName = transform.parent.gameObject.name;
     }
 
     private void PerformAction(InputAction.CallbackContext obj)
@@ -31,7 +33,7 @@ public class DialogTrigger : MonoBehaviour
             DialogueManager dm = DialogueManager.instance;
             if (!dm.dialogIsPlaying)
             {
-                dm.EnterDialogueMode(inkJson);
+                dm.EnterDialogueMode(inkJson, npcName);
             }
         }
     }

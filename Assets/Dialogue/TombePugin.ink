@@ -1,2 +1,2 @@
-Shanti Pugin, 24.10.1893. Tu as été une vachement chouette maman, Gwenaëlle et Adrien
+Shanti Pugin, 24.10.1893 <br>Tu as été une vachement chouette maman <br>Gwenaëlle et Adrien
 -> END

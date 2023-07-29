@@ -167,7 +167,7 @@ Qu'est-ce qui pourrait lui faire croire que je l'ai trahi ?
 Non mais c'est quoi cette histoire de poule ? 
     * [Il pense que j'ai volé sa poule magique !]
         -> MurderVol
-    * [Il croît que j'ai fait rôtir l'entier de ses poules !]
+    * [Il croit que j'ai fait rôtir l'entier de ses poules !]
         ~error = true
         ~PresqueEndingCause = "C'est donc ma légendaire gourmandise qui m'a tué ?"
         -> PresqueEndingAneries

@@ -2,7 +2,7 @@ Le prêtre a l'air particulièrement heureux de te voir !
 « Une âme en peine à aider, la vie est fabuleuse ! Veux-tu te confesser ? Cela t'aidera vers le chemin de la lumière. »
     * [J'en aurais bien besoin !]
         -> confession
-    * [Il est pas question que je te confie mes secrets !]
+    * [Hors de question que je te confie mes secrets !]
         -> secrets
 
 === secrets === 

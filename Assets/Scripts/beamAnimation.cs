@@ -30,7 +30,7 @@ public class beamAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isCheckDone && beam.transform.position.y < -0.85)
+        if (!isCheckDone && beam.transform.position.y < 2)
         {
             isGoingDown = false;
             isCheckDone = true;

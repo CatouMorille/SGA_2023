@@ -150,7 +150,7 @@ public class DialogueManager : MonoBehaviour
 
     private void resetPierretteResponse()
     {
-        for (int i = 0; i < pierretteCorrectResponses.Length; i++)
+        for (int i = 0; i < pierretteGivenAnswerValidity.Length; i++)
         {
             pierretteGivenAnswerValidity[i] = false;
         }
@@ -161,6 +161,11 @@ public class DialogueManager : MonoBehaviour
         if (currentNpcName != pierrette.name)
         {
             return false;
+        }
+
+        for (int i = 0; i < pierretteGivenAnswerValidity.Length; i++)
+        {
+            Debug.Log("response validty: " + i + ": " + pierretteGivenAnswerValidity[i]);
         }
 
         foreach (bool answerValidity in pierretteGivenAnswerValidity)
@@ -255,7 +260,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (pierretteCorrectResponses[pierretteResponseIndex] == answer || answer == 2)
+        if (pierretteCorrectResponses[pierretteResponseIndex] == answer || pierretteCorrectResponses[pierretteResponseIndex]  == 2)
         {
             pierretteGivenAnswerValidity[pierretteResponseIndex] = true;
         }

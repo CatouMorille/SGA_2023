@@ -47,7 +47,7 @@ Bien ! Alors commençons avec une question facile. Tu as été tué par :
         -> AccidentVache
 
 === AccidentCanard === 
-Vous avez soudain une illumination : « C'est exactement ça ! Un canard enragé m'a becqueté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
+J'ai soudain une illumination : « C'est exactement ça ! Un canard enragé m'a becqueté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
 ~angry = true
 -> FalseEnding
 
@@ -69,10 +69,10 @@ Selon toi c'était :
         -> MURDER
 
 === AccidentEncorne === 
-Et qu'est-ce qui aurait provoqué ce comportement ?
-    * [quelqu'un l'a involontairement excité]
+Et qu'est-ce qui a énervé le taureau à ce point ?
+    * [un foulard rouge l'a excité]
         -> AccidentExcite 
-    * [ta propre incompétence]
+    * [ma propre incompétence avec les bêtes]
         -> AccidentIncompetent
 
 === AccidentIncompetent === 
@@ -80,16 +80,16 @@ Et qu'est-ce qui aurait provoqué ce comportement ?
 -> FalseEnding
 
 === AccidentExcite === 
-Qui pourrait être cette personne ?
-    * [ton meilleur pote Adrien]
+Qui tenait ce foulard ?
+    * [mon meilleur pote Adrien]
         ~PresqueEndingCause = "C'est ça ! Comme on travaille ensemble, Adrien a dû exciter involontairement le taureau !"
         -> PresqueEndingRationnel
-    * [ton patron, M. Roussy]
+    * [mon patron, M. Roussy]
         ~FalseEndingCause = "M. Roussy connaît tellement peu ses bêtes qu'il a dû invonlontairement exciter le taureau lorsque je travaillais !"
         -> FalseEnding
 
 === AccidentEcrase === 
-« Et selon toi la vache serait tombée d'où ?! Du toit d'une maison peut-être ?! » 
+« Et selon toi il serait tombé d'où ?! Du toit d'une maison peut-être ?! » 
 -> FalseEnding
 
 
@@ -114,9 +114,9 @@ Et cet homme, c'est :
 
 === MurderFemme ===
 Cette femme, il se pourrait bien que ce soit :
-    * [Gwenaëlle, que vous avez croisée au village]
+    * [Gwenaëlle, que j'ai croisée au village]
         -> RaisonGwen
-    * [Shanti Pugin, la mère de votre meilleur pote]
+    * [Shanti Pugin, la mère de mon meilleur pote]
         -> RaisonFantome 
 
 === RaisonGwen === 
@@ -133,7 +133,7 @@ Pourquoi Gwenaëlle aurait-elle voulu te tuer ?
 -> FalseEnding
 
 === RaisonFantome === 
-Ca tombe sous le sens ! Tu t'écries : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils ! » <br>« Mais voyons ! Shanti Pugin est morte depuis des mois ! »
+Ca tombe sous le sens ! Je m'écrie : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils ! » <br>« Mais voyons ! Shanti Pugin est morte depuis des mois ! »
 ~angry = true
 -> FalseEnding
 
@@ -228,7 +228,7 @@ Les pièces du puzzle s'agencent alors que je réponds aux questions de Sainte P
 
 
 === PresqueEnding === 
-« C'est quand même dommage d'échouer si près du but ! Allez, réfléchis encore un peu et reviens me voir ! <br>Mais ne traîne pas, j'ai d'autres morts à sauver, moi !»
+« C'est quand même dommage d'échouer si près du but ! Allez, réfléchis encore un peu et reviens me voir ! <br>Mais ne traîne pas, j'ai d'autres morts à sauver, moi ! »
 -> END
 
 
@@ -244,7 +244,7 @@ Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi !
 Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
 // Element13
     * [Je viens au Paradis, bien sûr !]
-        Une forte lumière vous envahit soudain et... 
+        Une forte lumière t'envahit soudain et... 
         -> END
     * [Adrien doit payer !]
         -> BadEnding

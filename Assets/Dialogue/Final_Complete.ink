@@ -6,8 +6,7 @@ VAR caractere = ""
 VAR angry = false
 VAR neutre = false
 
-Une silhouette étrange et lumineuse se tient devant ta tombe. 
-Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
+Une silhouette étrange et lumineuse se tient non loin de ta tombe. <br>Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
 // Element0
     * [Mais t'es apparue quand toi ?!]
         ~reaction = "et j'apparais quand je veux ! J"
@@ -16,8 +15,7 @@ Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
     - -> StePierrette
 
 === StePierrette === 
-« Surveille ton langage, petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. 
-As-tu découvert ce qui t'est arrivé ? »
+« Surveille ton langage, petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. <br>As-tu découvert ce qui t'est arrivé ? »
 // Element1
     * [Non]
         -> Sortie
@@ -25,8 +23,7 @@ As-tu découvert ce qui t'est arrivé ? »
         -> Pret
 
 === Sortie === 
-« Alors va ! Fouille, interroge et surtout, réfléchis ! Je n'ai pas de temps à perdre avec les idiots. 
-Quand tu sauras ce qui t'est arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
+« Alors va ! Fouille, interroge et surtout, réfléchis ! Je n'ai pas de temps à perdre avec les idiots. <br>Quand tu sauras ce qui t'est arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
 -> END
 
 === Pret ===
@@ -50,7 +47,7 @@ Bien ! Alors commençons avec une question facile. Tu as été tué par
         -> AccidentVache
 
 === AccidentCanard === 
-Vous avez soudain une illumination : « C'est exactement ça ! Un canard enragé m'a bequeté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
+Vous avez soudain une illumination : « C'est exactement ça ! Un canard enragé m'a becqueté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
 ~angry = true
 -> FalseEnding
 
@@ -99,7 +96,7 @@ Qui pourrait être cette personne ?
 
 === MURDER ===
 // Element6
-Il y a pas de doute, le meurtrier est 
+Il n'y a pas de doute, le meurtrier est 
     * [un homme]
         -> MurderHomme
     * [une femme]
@@ -109,9 +106,9 @@ Il y a pas de doute, le meurtrier est
 === MurderHomme === 
 Et cet homme, c'est
 // Element7 
-    * [ton meilleur pote Adrien]
+    * [mon meilleur pote Adrien !]
         -> MurderCause
-    * [ton patron, M. Roussy]
+    * [mon patron, M. Roussy !]
         ~error = true
         -> MurderAutre
 
@@ -132,12 +129,11 @@ Pourquoi Gwenaëlle aurait-elle voulu te tuer ?
         -> FalseEndingGwen
 
 === FalseEndingGwen == 
-« Ah non mais ça suffit ces clichés sur les femmes ! Elles ne sont pas toutes des créatures remplie de {FalseEndingCause} quand même !»
+« Ah non mais ça suffit ces clichés sur les femmes ! Elles ne sont pas toutes des créatures remplies de {FalseEndingCause} quand même !»
 -> FalseEnding
 
 === RaisonFantome === 
-Ca tombe sous le sens ! Tu t'écries : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils ! »
-« Mais voyons ! Shanti Pugin est morte depuis des mois ! »
+Ca tombe sous le sens ! Tu t'écries : « C'est certainement parce qu'elle ne supportait pas le lien que j'avais avec son fils ! » <br>« Mais voyons ! Shanti Pugin est morte depuis des mois ! »
 ~angry = true
 -> FalseEnding
 
@@ -153,8 +149,8 @@ Pourquoi ton patron, voudrait-il donc te tuer ?
 
 ==== MurderCause ===
 // Element8
-Ã l'aide de quoi Adrien a-t-il provoqué ta mort ? 
-    * [Son foulard]
+À l'aide de quoi Adrien a-t-il provoqué ta mort ? 
+    * [Son foulard rouge]
         -> MurderAdrien
     * [Un poignard]
         ~PresqueEndingCause = "Ce saligaud, il m'a poignardé dans le dos !"
@@ -178,7 +174,7 @@ Qu'est-ce qui pourrait lui faire croire que tu l'as trahi ?
     * [Sa soeur raconte des sottises à mon encontre !]
             ~error = true
         -> PresqueEndingGwen
-    * [Sa précieuse poule qui a disparu !]
+    * [Sa précieuse poule a disparu !]
         -> MurderPoule
 
 === MurderPoule ===
@@ -186,7 +182,7 @@ Qu'est-ce qui pourrait lui faire croire que tu l'as trahi ?
 Non mais c'est quoi cette histoire de volaille ? 
     * [Il pense que j'ai volé sa poule magique !]
         -> MurderVol
-    * [Il croit que j'ai fait rôtir l'entier de ses poules !]
+    * [Il croit que j'ai fait rôtir l'entier de ses poulets !]
         ~error = true
         ~PresqueEndingCause = "C'est donc ma légendaire gourmandise qui m'a tué ?"
         -> PresqueEndingAneries
@@ -204,45 +200,35 @@ Et qu'est-ce qui est vraiment arrivé à cette poule ?
 
 
 
-
-
 === PresqueEndingGwen === 
-Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
-Tu t'écries : « Ce serait donc sa soeur, Gwenaëlle, qui lui a monté la bourrichon contre moi ?! » 
-Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter de blâmer les femmes pour tout et n'importe quoi aussi ! »
-Cette accusation gratuite semble l'avoir visiblement énervée. 
+Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. <br>Tu t'écries : « Ce serait donc sa soeur, Gwenaëlle, qui lui a monté le bourrichon contre moi ?! » 
+Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter de blâmer les femmes pour tout et n'importe quoi aussi ! » <br>Cette accusation gratuite semble l'avoir visiblement énervée. 
 -> PresqueEnding
 
 
 === PresqueEndingRationnel === 
-Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
-Tu t'écries : « {PresqueEndingCause} » 
+Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. <br>Tu t'écries : « {PresqueEndingCause} » 
 -> PresqueEnding
 
 
 === PresqueEndingAneries === 
-Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
-Tu t'écries : « {PresqueEndingCause} » 
-Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des âneries ! »
-Puis elle reprend, un peu plus conciliante.  
+Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette.  <br>Tu t'écries : « {PresqueEndingCause} » 
+Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des âneries ! » <br>Puis elle reprend, un peu plus conciliante.  
         -> PresqueEnding
 
 === FalseEndingRaison === 
-Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. 
-Tu t'écries : « {FalseEndingCause} » 
+Les pièces du puzzle s'agencent alors que tu réponds aux questions de Sainte Pierrette. <br>Tu t'écries : « {FalseEndingCause} » 
 -> FalseEnding
 
 
 === FalseEnding ===
 {angry : Sainte Pierrette tape violemment sa crosse au sol, hors d'elle. « Ah non hein ! J'ai pas de temps à perdre avec des âneries, moi ! »|Sainte Pierrette soupire et te regarde d'un air dépité.} 
-« Est-ce que je t'ai dis que je détestais perdre mon temps ?
-Allez, va refaire un tour et ne reviens que quand tu auras réfléchis un peu ! Je n'ai pas de temps à perdre avec les idiots ! »
+« Est-ce que je t'ai dit que je détestais perdre mon temps ? Allez, va refaire un tour et ne reviens que quand tu auras réfléchi un peu ! Je n'ai pas de temps à perdre avec les idiots ! »
 -> END
 
 
 === PresqueEnding === 
-« C'est quand même dommage d'échouer si près du but ! Allez, réfléchis encore un peu et reviens me voir !
-Mais traîne pas, j'ai d'autres morts à aller voir, moi !»
+« C'est quand même dommage d'échouer si près du but ! Allez, réfléchis encore un peu et reviens me voir ! <br>Mais ne traîne pas, j'ai d'autres morts à sauver, moi !»
 -> END
 
 
@@ -251,12 +237,8 @@ Ca y est. Toutes les pièces du puzzle s'agencent dans ta tête pendant que tu t
 C'est lui. 
 C'est lui, ton meilleur pote. 
 C'est lui, Adrien. 
-C'est lui qui t'a tué ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute dans le dos.
-Mais comment a-t-il pu croire que tu le trahirais ? Comment a-t-il pu penser que tu lui volerais sa poule aux oeufs d'or ?
-La colère monte : « Adrien m'a encorné avec un taureau !!! »
-« Ohlà petit ! Chuis pas sourde ! Crie pas comme ça !  
-Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi ! 
-Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
+C'est lui qui t'a tué ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute dans le dos. <br>Mais comment a-t-il pu croire que tu le trahirais ? Comment a-t-il pu penser que tu lui volerais sa poule aux oeufs d'or ? <br>La colère monte : « Adrien m'a encorné avec un taureau !!! »
+« Ohlà petit ! Chuis pas sourde ! Crie pas comme ça !  <br>Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi ! <br>Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
 // Element13
     * [Je viens au Paradis, bien sûr !]
         Une forte lumière vous envahit soudain et... 

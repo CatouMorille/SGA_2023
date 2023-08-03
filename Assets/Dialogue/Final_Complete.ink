@@ -17,7 +17,7 @@ Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
 
 === StePierrette === 
 « Surveille ton langage, petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. 
-As-tu découvert ce qui t'es arrivé ? »
+As-tu découvert ce qui t'est arrivé ? »
 // Element1
     * [Non]
         -> Sortie
@@ -26,7 +26,7 @@ As-tu découvert ce qui t'es arrivé ? »
 
 === Sortie === 
 « Alors va ! Fouille, interroge et surtout, réfléchis ! Je n'ai pas de temps à perdre avec les idiots. 
-Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
+Quand tu sauras ce qui t'est arrivé, reviens me voir et je verrai si je peux te faire entrer au Paradis. »
 -> END
 
 === Pret ===
@@ -38,7 +38,7 @@ Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te 
         -> SortieFache 
 
 === SortieFache ===
-« Alors cesse de me faire perdre mon temps et ne reviens quand tu sauras vraiment ce qui t'es arrivé !»
+« Alors cesse de me faire perdre mon temps et ne reviens que quand tu sauras vraiment ce qui t'est arrivé !»
     -> END
 
 === Questionnaire === 
@@ -50,7 +50,7 @@ Bien ! Alors commençons avec une question facile. Tu as été tué par
         -> AccidentVache
 
 === AccidentCanard === 
-Vous avez soudain une illumation : « C'est exactement ça ! Un canard enragé m'a bequeté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
+Vous avez soudain une illumination : « C'est exactement ça ! Un canard enragé m'a bequeté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
 ~angry = true
 -> FalseEnding
 
@@ -107,10 +107,10 @@ Il y a pas de doute, le meurtrier est
         -> MurderFemme
 
 === MurderHomme === 
-Et c'est homme, c'est
+Et cet homme, c'est
 // Element7 
     * [ton meilleur pote Adrien]
-        -> MurderAdrien
+        -> MurderCause
     * [ton patron, M. Roussy]
         ~error = true
         -> MurderAutre
@@ -151,8 +151,18 @@ Pourquoi ton patron, voudrait-il donc te tuer ?
         -> FalseEndingRaison
 
 
-=== MurderAdrien ===
+==== MurderCause ===
 // Element8
+Ã l'aide de quoi Adrien a-t-il provoqué ta mort ? 
+    * [Son foulard]
+        -> MurderAdrien
+    * [Un poignard]
+        ~PresqueEndingCause = "Ce saligaud, il m'a poignardé dans le dos !"
+        -> PresqueEndingRationnel
+
+
+=== MurderAdrien ===
+// Element9
 Mais pourquoi ton meilleur pote voudrait-il te tuer ? 
     * [Par jalousie voyons !]
         ~angry = true
@@ -163,8 +173,8 @@ Mais pourquoi ton meilleur pote voudrait-il te tuer ?
 
 
 === MurderAPtrahison ===
-// Element9
-Qu'est-ce qui pourrait lui faire croire que je l'ai trahi ?
+// Element10
+Qu'est-ce qui pourrait lui faire croire que tu l'as trahi ?
     * [Sa soeur raconte des sottises à mon encontre !]
             ~error = true
         -> PresqueEndingGwen
@@ -172,8 +182,8 @@ Qu'est-ce qui pourrait lui faire croire que je l'ai trahi ?
         -> MurderPoule
 
 === MurderPoule ===
-// Element10
-Non mais c'est quoi cette histoire de poule ? 
+// Element11
+Non mais c'est quoi cette histoire de volaille ? 
     * [Il pense que j'ai volé sa poule magique !]
         -> MurderVol
     * [Il croit que j'ai fait rôtir l'entier de ses poules !]
@@ -182,24 +192,17 @@ Non mais c'est quoi cette histoire de poule ?
         -> PresqueEndingAneries
 
 ==== MurderVol ===
-// Element11
+// Element12
 Et qu'est-ce qui est vraiment arrivé à cette poule ? 
     * [C'est quelqu'un d'autre qui l'a volée !]
         ~error = true
         ~PresqueEndingCause = "C'est horrible ! Adrien m'a tué pour le crime de quelqu'un d'autre !"
         -> PresqueEndingRationnel
     * [C'est cette feignasse de Lucien qui l'a tuée !]
-        -> MurderCause
-
-
-==== MurderCause ===
-// Element12
-À l'aide de quoi Lucien a-t-il provoqué ta mort ? 
-    * [Son foulard]
         -> TrueEnding
-    * [Un poignard]
-        ~PresqueEndingCause = "Ce saligaud, il m'a poignardé dans le dos !"
-        -> PresqueEndingRationnel
+
+
+
 
 
 

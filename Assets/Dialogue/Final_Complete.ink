@@ -8,6 +8,7 @@ VAR neutre = false
 
 Une silhouette étrange et lumineuse se tient devant ta tombe. 
 Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
+// Element0
     * [Mais t'es apparue quand toi ?!]
         ~reaction = "et j'apparais quand je veux ! J"
     * [Pardon, mais t'es qui toi ?!]
@@ -17,6 +18,7 @@ Elle t'interpelle : « Ô toi, âme égarée ! Arrête-toi un instant. »
 === StePierrette === 
 « Surveille ton langage, petit ! Je suis Sainte Pierrette {reaction}e suis la seule ici à pouvoir t'aider. 
 As-tu découvert ce qui t'es arrivé ? »
+// Element1
     * [Non]
         -> Sortie
     * [Oui]
@@ -29,6 +31,7 @@ Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te 
 
 === Pret ===
 « C'est bien ! Tu es donc prêt à répondre à mes questions ? »
+// Element2
     * [Oui !]
         -> Questionnaire
     * [Heu... non en fait, pas vraiment...]
@@ -39,44 +42,45 @@ Quand tu sauras ce qui t'es arrivé, reviens me voir et je verrai si je peux te 
     -> END
 
 === Questionnaire === 
-Bien ! Alors commençons avec une question facile. Tu penses que ta mort est  
-    * [un bête accident]
-        ~error = true
-        -> ACCIDENT 
-    * [un odieux crime ! ]
-        -> MURDER
-        
-=== ACCIDENT ===
-Selon toi tu as été tué par
-    * [un taureau]
-        -> AccidentVache
+Bien ! Alors commençons avec une question facile. Tu as été tué par
+// Element3
     * [un canard]
         -> AccidentCanard
+    * [un taureau]
+        -> AccidentVache
 
 === AccidentCanard === 
 Vous avez soudain une illumation : « C'est exactement ça ! Un canard enragé m'a bequeté jusqu'à ce que mort s'en suive quand je passais au bord de l'étang ! »
 ~angry = true
 -> FalseEnding
 
-
 === AccidentVache ===
 Et comment ce taureau t'a-t-il tué ? 
+// Element4
     * [il m'a encorné]
-        -> AccidentEncorne
+        -> ACCIDENT
     * [il m'a écrasé de tout son poids]
         -> AccidentEcrase
 
+=== ACCIDENT ===
+Selon toi c'était
+// Element5
+    * [un bête accident]
+        ~error = true
+        -> AccidentEncorne 
+    * [un odieux crime ! ]
+        -> MURDER
+
 === AccidentEncorne === 
-Et qu'est-ce qui aurait provoqué ce comportement ? 
+Et qu'est-ce qui aurait provoqué ce comportement ?
+    * [quelqu'un l'a involontairement excité]
+        -> AccidentExcite 
     * [ta propre incompétence]
         -> AccidentIncompetent
-    * [quelqu'un l'a volontairement excité]
-        -> AccidentExcite
 
 === AccidentIncompetent === 
 « Si tu es aussi doué avec les bêtes que pour les enquêtes, ça ne m'étonnerait pas du tout ! »
 -> FalseEnding
-
 
 === AccidentExcite === 
 Qui pourrait être cette personne ?
@@ -87,13 +91,14 @@ Qui pourrait être cette personne ?
         ~FalseEndingCause = "M. Roussy connaît tellement peu ses bêtes qu'il a dû invonlontairement exciter le taureau lorsque je travaillais !"
         -> FalseEnding
 
-
 === AccidentEcrase === 
 « Et selon toi la vache serait tombée d'où ?! Du toit d'une maison peut-être ?! » 
 -> FalseEnding
 
 
+
 === MURDER ===
+// Element6
 Il y a pas de doute, le meurtrier est 
     * [un homme]
         -> MurderHomme
@@ -102,7 +107,8 @@ Il y a pas de doute, le meurtrier est
         -> MurderFemme
 
 === MurderHomme === 
-Et c'est homme, c'est 
+Et c'est homme, c'est
+// Element7 
     * [ton meilleur pote Adrien]
         -> MurderAdrien
     * [ton patron, M. Roussy]
@@ -145,7 +151,8 @@ Pourquoi ton patron, voudrait-il donc te tuer ?
         -> FalseEndingRaison
 
 
-=== MurderAdrien === 
+=== MurderAdrien ===
+// Element8
 Mais pourquoi ton meilleur pote voudrait-il te tuer ? 
     * [Par jalousie voyons !]
         ~angry = true
@@ -155,7 +162,8 @@ Mais pourquoi ton meilleur pote voudrait-il te tuer ?
         -> MurderAPtrahison
 
 
-=== MurderAPtrahison === 
+=== MurderAPtrahison ===
+// Element9
 Qu'est-ce qui pourrait lui faire croire que je l'ai trahi ?
     * [Sa soeur raconte des sottises à mon encontre !]
             ~error = true
@@ -164,6 +172,7 @@ Qu'est-ce qui pourrait lui faire croire que je l'ai trahi ?
         -> MurderPoule
 
 === MurderPoule ===
+// Element10
 Non mais c'est quoi cette histoire de poule ? 
     * [Il pense que j'ai volé sa poule magique !]
         -> MurderVol
@@ -172,8 +181,9 @@ Non mais c'est quoi cette histoire de poule ?
         ~PresqueEndingCause = "C'est donc ma légendaire gourmandise qui m'a tué ?"
         -> PresqueEndingAneries
 
-==== MurderVol === 
-Et qu'est-ce qui vraiment arrivé à cette poule ? 
+==== MurderVol ===
+// Element11
+Et qu'est-ce qui est vraiment arrivé à cette poule ? 
     * [C'est quelqu'un d'autre qui l'a volée !]
         ~error = true
         ~PresqueEndingCause = "C'est horrible ! Adrien m'a tué pour le crime de quelqu'un d'autre !"
@@ -182,21 +192,15 @@ Et qu'est-ce qui vraiment arrivé à cette poule ?
         -> MurderCause
 
 
-==== MurderCause === 
-Et comment Adrien t'a-t-il tué ? 
-    * [Il a déguisé ça en accident !]
-        -> MurderTaureau
-    * [Il m'a sauvagement poignardé]
+==== MurderCause ===
+// Element12
+À l'aide de quoi Lucien a-t-il provoqué ta mort ? 
+    * [Son foulard]
+        -> TrueEnding
+    * [Un poignard]
         ~PresqueEndingCause = "Ce saligaud, il m'a poignardé dans le dos !"
         -> PresqueEndingRationnel
 
-=== MurderTaureau === 
-Qu'est-ce qu'il a utilisé ? 
-    * [un taureau avec lequel on travaille]
-        -> TrueEnding
-    * [un des canards de l'étang]
-        ~PresqueEndingCause = "Ce saligaud, il a entraîné un canard pour venir me picorer les entrailles !"
-        -> PresqueEndingAneries
 
 
 === PresqueEndingGwen === 
@@ -244,12 +248,13 @@ Ca y est. Toutes les pièces du puzzle s'agencent dans ta tête pendant que tu t
 C'est lui. 
 C'est lui, ton meilleur pote. 
 C'est lui, Adrien. 
-C'est lui qui t'a trahi ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute en pleine face.
+C'est lui qui t'a tué ! Qui a excité ce satané taureau à l'aide de son foulard rouge pour qu'il te percute dans le dos.
 Mais comment a-t-il pu croire que tu le trahirais ? Comment a-t-il pu penser que tu lui volerais sa poule aux oeufs d'or ?
-La colère monte : « Adrien, ce traître, m'a encorné avec un taureau !!! »
+La colère monte : « Adrien m'a encorné avec un taureau !!! »
 « Ohlà petit ! Chuis pas sourde ! Crie pas comme ça !  
 Bon, c'est pas tout ça, mais j'ai pas toute l'éternité devant moi ! 
 Faudrait voir pour me dire ce que tu veux faire : hanter à tout jamais celui qui t'a trahi ou tu te bouges pour venir nous rejoindre ? »
+// Element13
     * [Je viens au Paradis, bien sûr !]
         Une forte lumière vous envahit soudain et... 
         -> END

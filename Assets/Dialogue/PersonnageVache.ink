@@ -7,7 +7,7 @@ Mheeeeeuuuuu mheuuuuu.
 
 === Etape1 ===
 {~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....}
-    + [Mheeeeeeeeeeuh].
+    + [Mheeeeeeeeeeuh.]
         -> Etape2
     + [Partir]
         Mheeeeeuh. 

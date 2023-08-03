@@ -36,6 +36,7 @@ Lucien Bärtschi est, comme d'habitude, en train de dormir à poings fermés.
 
 === enerve ===
 R'garde-moi pas avec ces yeux ronds ! Chais pas du tout t'dire la raison d'sa colère ! <br>Tout c'que chais, c'est qu'ça m'a réveillé et qu'là, j'ai encore du sommeil en r'tard ! »
+-> END
 
 === asleep ===
        « Zzzzzz... taureau... Zzzzzz... dormir... Zzzzzz.... arrête de beugler... Zzzzzz... manger du steak... Zzzzzz... »

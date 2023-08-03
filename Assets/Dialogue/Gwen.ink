@@ -33,15 +33,6 @@ D'ailleurs, il m'a dit qu'il tenait absolument à te mettre au courant de notre 
     * [[Avouer] Oui, il m'avait déjà confié son secret.]
         -> verite
 
- /* ---------------------------------
-
-   * [Mentir, et lui dire que tu n'étais pas au courant.]
-        -> mensonge
-    * [Lui avouer qu'il t'avait déjà livré son secret.]
-        -> verite
-
- ---------------------------------- */
-
 === mensonge === 
 Gwenaëlle porte les mains à sa bouche ! 
 « Oh non ! J'ai révélé un secret qu'il voulait certainement te dire lui-même ! Vous étiez comme les deux doigts de la main, il avait une confiance aveugle en toi. J'espère qu'il ne m'en voudra pas de t'en avoir parlé avant lui ! »

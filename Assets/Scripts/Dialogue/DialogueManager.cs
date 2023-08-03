@@ -143,6 +143,7 @@ public class DialogueManager : MonoBehaviour
             pierrette.SetActive(true);
             EnterDialogueMode(PierretteAppearenceInkJson, "none", true);
             pierretteSound.Play();
+
         }
 
         pierretteResponseIndex = 0;

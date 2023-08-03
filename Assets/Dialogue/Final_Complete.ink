@@ -212,7 +212,7 @@ Les pièces du puzzle s'agencent alors que je réponds aux questions de Sainte P
 
 
 === PresqueEndingAneries === 
-Les pièces du puzzle s'agencent alors que je réponds aux questions de Sainte Pierrette.  <br>Je m'écrie : « {PresqueEndingCause} » 
+Les pièces du puzzle s'agencent alors que je réponds aux questions de Sainte Pierrette. <br>Je m'écrie : « {PresqueEndingCause} » 
 Sainte Pierrette secoue la tête : « Faudrait voir pour arrêter d'inventer des âneries ! » <br>Puis elle reprend, un peu plus conciliante.  
 -> PresqueEnding
 

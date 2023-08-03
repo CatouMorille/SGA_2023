@@ -28,9 +28,9 @@ Gwenaëlle Goetschi profite d'un moment de répit sans son mari et son fils.
 
 === secret ===
 D'ailleurs, il m'a dit qu'il tenait absolument à te mettre au courant de notre secret de famille. <br>Maman lui a confié son bien le plus précieux : la poule aux oeufs d'or qui se transmet de génération en génération ! »
-    * [[Mentir] En effet, il n'a pas eu le temps de me dire !]
+    * [\[Mentir\] En effet, il n'a pas eu le temps de me dire !]
         -> mensonge
-    * [[Avouer] Oui, il m'avait déjà confié son secret.]
+    * [\[Avouer\] Oui, il m'avait déjà confié son secret.]
         -> verite
 
 === mensonge === 

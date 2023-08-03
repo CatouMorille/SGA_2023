@@ -2,6 +2,7 @@ Mheeeeeuuuuu mheuuuuu.
     + [Mheu ?]
         -> Etape1
     + [Partir]
+        Mheeeeeuh. 
         -> END
 
 === Etape1 ===
@@ -9,6 +10,7 @@ Mheeeeeuuuuu mheuuuuu.
     + [Mheeeeeeeeeeuh].
         -> Etape2
     + [Partir]
+        Mheeeeeuh. 
         -> END
         
 === Etape2 ===
@@ -23,6 +25,7 @@ Mheeeeeuuuuu mheuuuuu.
     + [Mheeeeu.]
         -> Etape4
     + [Partir]
+        Mheeeeeuh. 
         -> END
         
 === Etape4 ===
@@ -30,6 +33,7 @@ Mheeeeeuuuuu mheuuuuu.
     + [Mheu mheu ?]
         -> Etape5
     + [Partir]
+        Mheeeeeuh. 
         -> END
 
 === Etape5 ===
@@ -37,6 +41,7 @@ Mheeeeeuuuuu mheuuuuu.
     + [Mheuh !]
         -> Etape1
     + [Partir]
+        Mheeeeeuh. 
         -> END        
 
 

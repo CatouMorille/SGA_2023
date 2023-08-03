@@ -25946,7 +25946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierretteCorrectResponses.Array.data[8]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierretteCorrectResponses.Array.data[9]
@@ -25954,10 +25954,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierretteCorrectResponses.Array.data[10]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
       propertyPath: pierretteCorrectResponses.Array.data[11]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997826447166542327, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}
+      propertyPath: pierretteCorrectResponses.Array.data[12]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8327091830815584452, guid: d6b232f9448935e4eb8d3bc698cf119a, type: 3}

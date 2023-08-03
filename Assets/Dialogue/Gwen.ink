@@ -48,8 +48,8 @@ Gwenaëlle porte les mains à sa bouche !
 -> Final
 
 === Final === 
-Tu t'apprêtes à partir quand Gwenaëlle sussure : « Tu reviendras me voir, n'est-ce-pas ? »
-    * [J'espère bien que non ! Il faut qu  e je quitte ce monde, moi !]
+Tu t'apprêtes à partir quand Gwenaëlle sussure : <br>« Tu reviendras me voir, n'est-ce-pas ? »
+    * [J'espère bien que non ! Il faut que je quitte ce monde, moi !]
         Tu entends un sanglot réprimé dès que tu lui tournes le dos. -> END
     * [Bien sûr, dès que je le pourrai !]
         Elle détourne le regard, mais tu devines son sourire ravi. -> END

@@ -14,14 +14,14 @@ Mheeeeeuuuuu mheuuuuu.
         -> END
         
 === Etape2 ===
-{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse moi tranquille, j'ai de l'herbe à brouter moi !}
+{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse-moi tranquille, j'ai de l'herbe à brouter moi !}
     + [Mheu!]
         -> Etape3
     + [Je suis vraiment en train de parler avec une vache ?]
         -> Etape3
         
 === Etape3 ===
-{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse moi tranquille, j'ai de l'herbe à brouter moi !}
+{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse-moi tranquille, j'ai de l'herbe à brouter moi !}
     + [Mheeeeu.]
         -> Etape4
     + [Partir]
@@ -29,7 +29,7 @@ Mheeeeeuuuuu mheuuuuu.
         -> END
         
 === Etape4 ===
-{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse moi tranquille, j'ai de l'herbe à brouter moi !}
+{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse-moi tranquille, j'ai de l'herbe à brouter moi !}
     + [Mheu mheu ?]
         -> Etape5
     + [Partir]
@@ -37,7 +37,7 @@ Mheeeeeuuuuu mheuuuuu.
         -> END
 
 === Etape5 ===
-{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse moi tranquille, j'ai de l'herbe à brouter moi !}
+{~Mheeeeeeeeeeuh meuh mheeeeeu.|Mheu mheu !|Mheeeeeuuuuu mheu meh ?|Mheeeeeuuuuu mheu.|Mheu.|Mheeeeeuuuuu !|Mheeeuuuuu mheeeeuuuu mheeeeuuuu !|Mheeeeuuuu....|Mheuuuuuh ?|Bon ça va laisse-moi tranquille, j'ai de l'herbe à brouter moi !}
     + [Mheuh !]
         -> Etape1
     + [Partir]
